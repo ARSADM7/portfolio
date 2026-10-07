@@ -3,163 +3,261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Alegre Sithole —-developer júnior. HTML, CSS e JavaScript. Disponível para estágio ou trabalho remoto em Moçambique.">
+<meta name="description" content="Alegre Sithole — programador júnior em HTML, CSS e JavaScript. Disponível para estágio, assistência técnica ou trabalho remoto em Moçambique.">
 <meta name="author" content="Alegre Sithole">
-<meta property="og:title" content="Alegre Sithole — Developer júnior">
-<meta property="og:description" content="HTML, CSS e JavaScript. Disponível para estágio ou trabalho remoto.">
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Alegre Sithole — Programador júnior">
+<meta property="og:description" content="HTML, CSS e JavaScript. Disponível para estágio ou trabalho remoto em Moçambique.">
 <meta property="og:type" content="website">
-<title>Alegre Sithole — Developer júnior</title>
+<title>Alegre Sithole — Programador júnior</title>
+<link rel="preconnect" href="https://github.com">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar para o conteúdo</a>
 
-<header class="site-header">
-  <nav class="nav container" aria-label="Navegação principal">
-    <a class="nav__brand" href="#top">AS<span class="dot">.</span></a>
-    <ul class="nav__links" id="nav-links">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <nav class="topbar__inner" aria-label="Navegação principal">
+    <a class="wordmark" href="#top">
+      <span class="wordmark__mark" aria-hidden="true">AS</span>
+      <span class="wordmark__text">programador&nbsp;júnior</span>
+    </a>
+
+    <ul class="topbar__links" id="nav-links">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#competencias">Competências</a></li>
       <li><a href="#projectos">Projectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <li>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Mudar tema">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path class="i-sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+            <path class="i-moon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+          </svg>
+        </button>
+      </li>
     </ul>
-    <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
-      <span></span><span></span><span></span>
+
+    <button class="burger" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+      <span></span><span></span>
     </button>
   </nav>
 </header>
 
 <main id="main">
 
+  <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <div class="container hero__inner">
-      <p class="hero__eyebrow">Mapai, Gaza — Moçambique</p>
-      <h1 class="hero__title">
-        Olá, sou <span class="accent">Alegre Sithole</span>
-      </h1>
-      <p class="hero__lead">
-        Desenvolvedor júnior a construir a base em HTML, CSS e JavaScript.
-        Procuro estágio, assistência técnica ou projectos remotos onde possa
-        aprender a sério e a contribuir.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#contacto">Falar comigo</a>
-        <a class="btn btn--ghost" href="https://github.com/ARSADM7" target="_blank" rel="noopener">Ver no GitHub</a>
+    <div class="wrap hero__grid">
+
+      <div class="hero__copy">
+        <p class="eyebrow">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Disponível para estágio e remoto
+        </p>
+
+        <h1 class="hero__title">
+          Construo coisas<br>
+          <span class="hero__thin">que</span> <em class="hero__em">funcionam</em>
+        </h1>
+
+        <p class="hero__lead">
+          Sou o <strong>Alegre Sithole</strong>, do distrito de Mapai, Gaza.
+          Aprendo HTML, CSS e JavaScript e transformo o que aprendo em
+          projectos que dá para abrir, mexer e testar.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#contacto">
+            Falar comigo
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5"/></svg>
+          </a>
+          <a class="btn btn--line" href="https://github.com/ARSADM7" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </div>
+
+        <dl class="facts">
+          <div class="fact">
+            <dt>Onde estou</dt>
+            <dd>Mapai, Gaza</dd>
+          </div>
+          <div class="fact">
+            <dt>Estudo</dt>
+            <dd>Ensino secundário</dd>
+          </div>
+          <div class="fact">
+            <dt>Quero</dt>
+            <dd>Estágio · Remoto</dd>
+          </div>
+        </dl>
       </div>
-      <div class="hero__status">
-        <span class="pulse" aria-hidden="true"></span>
-        Disponível para estágio e trabalho remoto
+
+      <!-- Terminal: prova de que escreve código -->
+      <div class="hero__aside">
+        <div class="term" role="img" aria-label="Exemplo de código: função de validação de URL segura, escrita em JavaScript">
+          <div class="term__bar">
+            <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="term__title">safeUrl.js</span>
+          </div>
+          <pre class="term__body"><code><span class="c-k">function</span> <span class="c-f">safeUrl</span>(<span class="c-t">url</span>) {
+  <span class="c-k">try</span> {
+    <span class="c-k">const</span> <span class="c-v">u</span> = <span class="c-k">new</span> <span class="c-c">URL</span>(<span class="c-s">url</span>);
+    <span class="c-k">return</span> u.protocol === <span class="c-s">"https:"</span> ||
+           u.protocol === <span class="c-s">"http:"</span>;
+  } <span class="c-k">catch</span> {
+    <span class="c-k">return</span> <span class="c-b">false</span>;
+  }
+}</code></pre>
+        </div>
+        <p class="hero__aside-note">
+          Valida URLs antes de guardar. Rejeita <code>javascript:</code>.
+          Vem do meu gestor de candidaturas.
+        </p>
       </div>
+
     </div>
   </section>
 
-  <section class="section" id="sobre">
-    <div class="container">
-      <h2 class="section__title">Sobre</h2>
+  <!-- ============ SOBRE ============ -->
+  <section class="band" id="sobre">
+    <div class="wrap">
+      <p class="band__label"><span>01</span> Sobre</p>
       <div class="prose">
-        <p>
-          Estou no secundário no distrito de Mapai, Gaza, e comecei a aprender
-          programação por conta própria. Aprendo por escolha — não porque me
-          empurraram — e por isso dedico tempo real a <strong>construir</strong>,
-          não só a ler.
+        <p class="prose__lead">
+          Estou no secundário e não tenho anos de experiência. Tenho
+          vontade de aprender e costumo entregar o que prometo.
         </p>
         <p>
-          Este portfolio é uma das coisas que construí sozinho, sem framework e
-          sem dependências, para mostrar como trabalho e para aprender na
-          prática como se constrói software de verdade.
+          Comecei por curiosidade, sem mesa de formação. Aprendi a ler
+          código antes de aprender a escrever, e isso poupou-me tempo:
+          quando errei, percebi porque.
         </p>
         <p>
-Sei que estou no início da carreira. O que trago é vontade de aprender,
-        consistência nos estudos e ausência total de preguiça.
+          Os projectos abaixo foram feitos sozinho, sem framework e sem
+          ajuda, para mostrar como trabalho. Estão todos no
+          <a href="https://github.com/ARSADM7" target="_blank" rel="noopener">GitHub</a>,
+          com histórico de commits e um ficheiro de testes.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="competencias">
-    <div class="container">
-      <h2 class="section__title">Competências</h2>
-      <ul class="grid grid--skills">
-        <li class="card">
-          <h3>HTML</h3>
-          <p>Semântica, acessibilidade e estrutura de páginas.</p>
+  <!-- ============ COMPETÊNCIAS ============ -->
+  <section class="band band--alt" id="competencias">
+    <div class="wrap">
+      <p class="band__label"><span>02</span> Competências</p>
+
+      <ul class="skills">
+        <li class="skill">
+          <span class="skill__name">HTML</span>
+          <span class="skill__note">Semântica, acessibilidade, formulários</span>
         </li>
-        <li class="card">
-          <h3>CSS</h3>
-          <p>Flexbox, Grid, variáveis, responsividade e temas.</p>
+        <li class="skill">
+          <span class="skill__name">CSS</span>
+          <span class="skill__note">Flexbox, Grid, variáveis, responsividade</span>
         </li>
-        <li class="card">
-          <h3>JavaScript</h3>
-          <p>DOM, eventos, <code>localStorage</code> e estado.</p>
+        <li class="skill">
+          <span class="skill__name">JavaScript</span>
+          <span class="skill__note">DOM, eventos, localStorage, validação</span>
         </li>
-        <li class="card">
-          <h3>Git</h3>
-          <p>Branches, commits descritivos e pull requests.</p>
+        <li class="skill">
+          <span class="skill__name">Git</span>
+          <span class="skill__note">Commits descritivos, branches, histórico</span>
         </li>
-        <li class="card">
-          <h3>Em evolução</h3>
-          <p>Python, bases de dados e noções de redes.</p>
+        <li class="skill">
+          <span class="skill__name">Testes</span>
+          <span class="skill__note">Escrever testes sem dependências</span>
         </li>
-        <li class="card">
-          <h3>Como trabalho</h3>
-          <p>Autodidata, com internet limitada e sem desculpas.</p>
+        <li class="skill skill--muted">
+          <span class="skill__name">A aprender</span>
+          <span class="skill__note">Python, bases de dados, redes</span>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="section" id="projectos">
-    <div class="container">
-      <h2 class="section__title">Projectos</h2>
-      <div class="grid grid--projects">
-        <article class="card card--project">
-          <h3>Portfolio pessoal</h3>
-          <p>
-            Este site. HTML, CSS e JavaScript sem dependências, com tema claro
-            e escuro, menu responsivo e respeito por
-            <code>prefers-reduced-motion</code>.
-          </p>
-          <ul class="tags">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li>
-          </ul>
+  <!-- ============ PROJECTOS ============ -->
+  <section class="band" id="projectos">
+    <div class="wrap">
+      <p class="band__label"><span>03</span> Projectos</p>
+
+      <div class="works">
+
+        <article class="work">
+          <div class="work__body">
+            <h3 class="work__title">Portfolio pessoal</h3>
+            <p class="work__desc">
+              Este site. HTML, CSS e JavaScript sem dependências, com tema
+              claro e escuro, menu móvel e respeito por
+              <code>prefers-reduced-motion</code>.
+            </p>
+            <ul class="chips">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Acessibilidade</li>
+            </ul>
+          </div>
+          <div class="work__side">
+            <a class="work__link" href="https://arsadm7.github.io/portfolio/" target="_blank" rel="noopener">
+              Ver no ar <span aria-hidden="true">↗</span>
+            </a>
+            <a class="work__link work__link--quiet" href="https://github.com/ARSADM7/portfolio" target="_blank" rel="noopener">
+              Código <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </article>
-        <article class="card card--project">
-          <h3>Gestor de candidaturas</h3>
-          <p>
-            Aplicação web para registar e acompanhar candidaturas a emprego.
-            Guarda tudo no navegador, filtra por estado, e exporta e importa
-            em JSON. Funciona offline.
-          </p>
-          <ul class="tags">
-            <li>JavaScript</li><li>localStorage</li><li>Acessibilidade</li>
-          </ul>
+
+        <article class="work">
+          <div class="work__body">
+            <h3 class="work__title">Gestor de candidaturas</h3>
+            <p class="work__desc">
+              Aplicação web para registar e acompanhar candidaturas a emprego.
+              Guarda tudo no navegador, filtra por estado, exporta e importa
+              em JSON. Funciona offline, sem servidor.
+            </p>
+            <ul class="chips">
+              <li>JavaScript</li><li>localStorage</li><li>Testes</li>
+            </ul>
+          </div>
+          <div class="work__side">
+            <a class="work__link" href="https://github.com/ARSADM7/gestor-candidaturas" target="_blank" rel="noopener">
+              Ver no GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </article>
+
       </div>
-      <p class="section__note">
-        Mais projectos a caminho — o objectivo é ter um por mês, não dez no primeiro mês.
+
+      <p class="band__foot">
+        Objectivo: um projecto por mês. Menos dez no primeiro, mais um de cada vez.
       </p>
     </div>
   </section>
 
-  <section class="section section--alt" id="contacto">
-    <div class="container">
-      <h2 class="section__title">Contacto</h2>
-      <p class="section__note section__note--lead">
+  <!-- ============ CONTACTO ============ -->
+  <section class="band band--alt" id="contacto">
+    <div class="wrap">
+      <p class="band__label"><span>04</span> Contacto</p>
+
+      <p class="prose__lead prose__lead--wide">
         Aberto a estágio, assistência técnica ou trabalho remoto.
         Se conhece uma oportunidade, agradeço o encaminhamento.
       </p>
-      <ul class="contact-list">
+
+      <ul class="contact">
         <li>
-          <span class="contact-list__label">GitHub</span>
-          <a href="https://github.com/ARSADM7" target="_blank" rel="noopener">github.com/ARSADM7</a>
+          <span class="contact__k">GitHub</span>
+          <a class="contact__v" href="https://github.com/ARSADM7" target="_blank" rel="noopener">github.com/ARSADM7</a>
         </li>
         <li>
-          <span class="contact-list__label">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/alegre-sithole-48b1162b3" target="_blank" rel="noopener">linkedin.com/in/alegre-sithole-48b1162b3</a>
+          <span class="contact__k">LinkedIn</span>
+          <a class="contact__v" href="https://www.linkedin.com/in/alegre-sithole-48b1162b3" target="_blank" rel="noopener">/in/alegre-sithole-48b1162b3</a>
         </li>
         <li>
-          <span class="contact-list__label">Localização</span>
-          <span>Mapai, distrito de Gaza, Moçambique</span>
+          <span class="contact__k">Local</span>
+          <span class="contact__v">Mapai, distrito de Gaza</span>
         </li>
       </ul>
     </div>
@@ -167,10 +265,12 @@ Sei que estou no início da carreira. O que trago é vontade de aprender,
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>© <span id="year">2026</span> Alegre Sithole</p>
-    <p class="muted">Construído à mão em HTML, CSS e JavaScript.</p>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>Alegre Sithole</p>
+    <p class="footer__note">
+      Feito à mão. <span id="year">2026</span> · Mapai, Moçambique
+    </p>
   </div>
 </footer>
 
